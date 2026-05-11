@@ -214,10 +214,10 @@
 }
 
 .fig-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.75rem;
-  margin: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
 }
 
 .fig-row .fig {
@@ -304,4 +304,141 @@
 .highlight-row td {
   background: var(--accent-bg);
   font-weight: 600;
+}
+
+/* ── TOC Tree ── */
+.toc-tree { margin: 1.5rem 0; }
+
+.toc-chapter-rail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.45rem;
+  margin-bottom: 1.1rem;
+}
+
+.toc-ch-card {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.toc-ch-card:hover { border-color: var(--accent); background: var(--accent-bg); text-decoration: none; }
+
+.toc-ch-badge {
+  font-family: var(--mono);
+  font-size: 0.67rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.toc-ch-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0.12rem 0 0.08rem;
+  line-height: 1.3;
+}
+
+.toc-ch-summary {
+  font-size: 0.71rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  font-style: italic;
+}
+
+.toc-derives {
+  font-size: 0.67rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  margin-top: 0.18rem;
+  opacity: 0.8;
+}
+
+.toc-section-block {
+  margin-bottom: 0.9rem;
+}
+
+.toc-block-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.3rem;
+  padding-left: 0.1rem;
+}
+
+.toc-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem 0.45rem;
+}
+
+.toc-sub-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.toc-node {
+  display: block;
+  padding: 0.32rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.12s;
+}
+.toc-node:hover { border-color: var(--accent); text-decoration: none; }
+
+.toc-node-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.32rem;
+}
+
+.toc-node-num {
+  font-family: var(--mono);
+  font-size: 0.67rem;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.toc-node-title {
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--text-h);
+  line-height: 1.25;
+}
+
+.toc-node-summary {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.08rem;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.toc-node-from {
+  font-size: 0.65rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  opacity: 0.72;
+  margin-top: 0.05rem;
+}
+
+/* Nav TODO items */
+.nav-todo {
+  opacity: 0.45;
+  font-style: italic;
+}
+.nav-todo::after {
+  content: ' (WIP)';
+  font-size: 0.78em;
+  font-style: normal;
 }
