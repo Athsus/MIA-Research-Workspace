@@ -1,7 +1,7 @@
 import Math from '../components/Math'
 import confusionImg from '../assets/confusion.png'
 
-const R = (path: string) => `/reports/${path}`
+const R = (path: string) => `${import.meta.env.BASE_URL}reports/${path}`
 
 function Fig({ src, caption, width }: { src: string; caption: string; width?: string }) {
   return (
