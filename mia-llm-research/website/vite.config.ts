@@ -24,5 +24,6 @@ function serveReports() {
 }
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/MIA-Research-Workspace/' : '/',
   plugins: [react(), serveReports()],
 })
