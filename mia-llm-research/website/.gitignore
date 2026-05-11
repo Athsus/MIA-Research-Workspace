@@ -1,5 +1,5 @@
 node_modules/
 dist/
-public/reports
+# public/reports is committed for GitHub Pages deployment
 *.local
 .DS_Store
