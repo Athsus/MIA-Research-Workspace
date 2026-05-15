@@ -49,7 +49,7 @@ export default function Sprint4() {
     <article className="report">
       <h1 id="top">Sprint 4: Exploration on Curvature Signals for Membership Inference and Landscapes</h1>
       <p className="meta">
-        Period: 2026-04-22 → 2026-05-08
+        Period: 2026-04-22 → 2026-05-08, source: https://athsus.github.io/MIA-Research-Workspace/#/sprint4
       </p>
 
       {/* TOC */}
