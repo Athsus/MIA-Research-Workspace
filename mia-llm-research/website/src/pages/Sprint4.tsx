@@ -47,9 +47,9 @@ function TocNode({ href, num, title, summary, from }: {
 export default function Sprint4() {
   return (
     <article className="report">
-      <h1 id="top">Exploration on Curvature Signals for Membership Inference and Landscapes</h1>
+      <h1 id="top">Sprint 4: Exploration on Curvature Signals for Membership Inference and Landscapes</h1>
       <p className="meta">
-        Period: 2026-04-22 → 2026-05-07
+        Period: 2026-04-22 → 2026-05-08
       </p>
 
       {/* TOC */}
@@ -272,10 +272,15 @@ delta = torch.randn(P)  # each entry ~ N(0,1), independent`}</code></pre>
         </div>
       </details>
       
-      <p>
-        The resulting 1D slice is always a smooth, symmetric basin — the loss rises in every direction from the minimum.
-        They use this to argue LLMs are well-conditioned and generalize.
-      </p>
+      <ul style={{ margin: '0 0 1rem 1.25rem' }}>
+        <li style={{ marginBottom: '0.2rem' }}>
+          The resulting 1D slice is always a smooth, symmetric basin.
+        </li>
+        <li>
+          The loss rises in every direction from the minimum &mdash; they use this to argue LLMs are well-conditioned and generalize.
+        </li>
+      </ul>
+ 
       <h3 id="ch1-inputspace" className="section-anchor">1.2 From Parameter Space to Input-Embedding Space</h3>
  
       <p>
@@ -922,14 +927,14 @@ signal = c @ c / ||g_e||²      # POLCA ∈ [0, 1]`}</code></pre>
 
       <h4>Spectral Window Fishing</h4>
       <p>
-        The initial ESD plots revealed that in some eigenvalue windows, the member and non-member spectra
+        The initial ESD plots revealed that in some <em>eigenvalue windows</em>, the member and non-member spectra
         appear to separate. Intuition: if a <em>fixed</em> spectral window [λ<sub>lo</sub>, λ<sub>hi</sub>]
         can be found where members consistently have more (or fewer) Ritz values than non-members,
         the count inside that window becomes a model-specific MIA signal.
         We scanned all windows via a sliding heatmap to test this hypothesis.
       </p>
       <p>
-        <strong>Conclusion: no robust window found.</strong> The best-window AUROC on github (~0.59) only
+        <strong>Sad Conclusion: no robust window found.</strong> The best-window AUROC on github (~0.59) only
         matches λ<sub>max</sub> alone, and it does not transfer to dm or pile_cc —
         suggesting the separation is dataset-specific noise rather than a stable geometric property.
       </p>
