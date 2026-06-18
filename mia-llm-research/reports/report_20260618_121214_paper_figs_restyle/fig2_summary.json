@@ -1,0 +1,31 @@
+{
+  "dm": {
+    "n_mem": 1000,
+    "n_non": 1000,
+    "AUROC_PPL": 0.5055550000000001,
+    "AUROC_lambda_c": 0.525927,
+    "lambda_c_pooling": "bot-5%",
+    "AUROC_PETAL": 0.5090990000000001
+  },
+  "github": {
+    "n_mem": 1000,
+    "n_non": 1000,
+    "AUROC_PPL": 0.638493,
+    "AUROC_lambda_c": 0.6115094999999999,
+    "lambda_c_pooling": "bot-5%"
+  },
+  "hackernews": {
+    "n_mem": 1000,
+    "n_non": 1000,
+    "AUROC_PPL": 0.505819,
+    "AUROC_lambda_c": 0.5235650000000001,
+    "lambda_c_pooling": "bot-50%"
+  },
+  "pile_cc": {
+    "n_mem": 1000,
+    "n_non": 1000,
+    "AUROC_PPL": 0.504459,
+    "AUROC_lambda_c": 0.535618,
+    "lambda_c_pooling": "bot-50%"
+  }
+}
